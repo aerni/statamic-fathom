@@ -36,7 +36,7 @@ return [
 
 ## Basic Usage
 1. Add the link of your shared Fathom site to the config.
-2. A new `Fathom` entry will be added to the `Tools` section in the Statamic control panel. This link takes you to the shared Fathom site.
+2. A new `Fathom` link will be added to the `Tools` section in the Statamic control panel. This link takes you to the shared Fathom site.
 
 ## Special Thanks
 Thanks to [visuellverstehen](https://visuellverstehen.de) for the work on [Statamic Plausible](https://github.com/visuellverstehen/statamic-plausible). This addon is pretty much copy-paste.
