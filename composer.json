@@ -1,0 +1,61 @@
+{
+    "name": "aerni/fathom",
+    "description": "Easily navigate to your shared Fathom site from the Statamic control panel",
+    "keywords": [
+        "statamic",
+        "v3",
+        "addon",
+        "fathom"
+    ],
+    "homepage": "https://github.com/aerni/statamic-fathom",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Aerni",
+            "email": "hello@michaelaerni.ch",
+            "homepage": "https://www.michaelaerni.ch",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "illuminate/support": "^7.0 || ^8.0",
+        "statamic/cms": "^3.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aerni\\Fathom\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aerni\\Fathom\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "statamic": {
+            "name": "Fathom",
+            "description": "Easily navigate to your shared Fathom site from the Statamic control panel"
+        },
+        "laravel": {
+            "providers": [
+                "Aerni\\Fathom\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
