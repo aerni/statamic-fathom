@@ -1,8 +1,7 @@
+![Statamic](https://flat.badgen.net/badge/Statamic/3.0+/FF269E) ![Packagist version](https://flat.badgen.net/packagist/v/aerni/fathom/latest) ![Packagist Total Downloads](https://flat.badgen.net/packagist/dt/aerni/fathom) ![License](https://flat.badgen.net/github/license/aerni/fathom)
+
 # Fathom
-
-![Statamic](https://flat.badgen.net/badge/Statamic/3.0+/FF269E)
-
-> Easily navigate to your shared Fathom site from the Statamic control panel
+This addon adds a link to the sidebar of the Statamic control panel to easily navigate to your shared Fathom site.
 
 ## Installation
 Install the addon using Composer.
