@@ -1,6 +1,6 @@
 {
     "name": "aerni/fathom",
-    "description": "Easily navigate to your shared Fathom site from the Statamic control panel",
+    "description": "Easily navigate to your shared Fathom site from Statamic's control panel",
     "keywords": [
         "statamic",
         "v3",
@@ -48,7 +48,7 @@
     "extra": {
         "statamic": {
             "name": "Fathom",
-            "description": "Easily navigate to your shared Fathom site from the Statamic control panel"
+            "description": "Easily navigate to your shared Fathom site from Statamic's control panel"
         },
         "laravel": {
             "providers": [
