@@ -12,24 +12,14 @@ class ServiceProvider extends AddonServiceProvider
         'cp'  => __DIR__.'/../routes/cp.php',
     ];
 
-    public function boot()
+    public function bootAddon(): void
     {
-        parent::boot();
-
-        $this->createMenu();
-
-        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'fathom');
-
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__ . '/../config/config.php' => config_path('fathom.php'),
-            ], 'fathom-config');
-        }
-
-        $this->publishConfigFile();
+        $this
+            ->createMenu()
+            ->autoPublishConfig();
     }
 
-    private function createMenu(): void
+    protected function createMenu(): self
     {
         Nav::extend(function ($nav) {
             $nav->create('Fathom')
@@ -37,12 +27,16 @@ class ServiceProvider extends AddonServiceProvider
                 ->route('fathom')
                 ->icon('seo-search-graph');
         });
+
+        return $this;
     }
 
-    private function publishConfigFile()
+    protected function autoPublishConfig(): self
     {
         Statamic::afterInstalled(function ($command) {
-            $command->call('vendor:publish', ['--tag' => 'fathom-config',]);
+            $command->call('vendor:publish', ['--tag' => 'fathom-config']);
         });
+
+        return $this;
     }
 }
