@@ -1,6 +1,6 @@
 <?php
 
-use Aerni\Fathom\Http\Controller\FathomController;
+use Aerni\Fathom\GetFathomLink;
 
 /*
 |--------------------------------------------------------------------------
@@ -8,4 +8,4 @@ use Aerni\Fathom\Http\Controller\FathomController;
 |--------------------------------------------------------------------------
 */
 
-Route::get('visit/fathom', [FathomController::class, '__invoke'])->name('fathom');
+Route::redirect('visit/fathom', GetFathomLink::handle())->name('fathom');
