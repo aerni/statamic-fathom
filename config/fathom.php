@@ -4,15 +4,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Shared Site Link
+    | Shared Fathom Site Link
     |--------------------------------------------------------------------------
     |
-    | This is the shared site link provided by Fathom.
-    |
-    | The Fathom docs: https://usefathom.com/support/sharing
+    | Add the link to your shared Fathom site.
     |
     */
 
-    'link' => env('FATHOM_LINK', 'https://app.usefathom.com/share/yourSharedLink'),
+    'link' => env('FATHOM_LINK'),
 
 ];
